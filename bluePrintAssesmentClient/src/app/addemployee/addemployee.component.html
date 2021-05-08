@@ -1,0 +1,29 @@
+<section class="content-wrapper">
+    <h2 class="content-header">
+        Personal Information
+    </h2>
+<div class="input-wrapper">
+    <form [formGroup]="Addemployee" (ngSubmit)="onFormSubmit()">  
+
+        <label for="fullname"><span>Full Name</span>
+            <input type="text" name="fullname" id="fullname" formControlName="FullName" required>
+        </label>
+        <label for="address"><span>Address</span>
+            <input type="text" name="address" id="address" formControlName="Address" required>
+        </label>
+        <label for="phone"><span>Phone Number</span>
+            <input type="text" name="phone" id="phone" formControlName="PhoneNumber" required>
+        </label>
+        <label for="position"><span>Position</span>
+            <select class="custom-select" (change)="changePos($event)" formControlName="Position">
+                <option value="">Choose your Position</option>
+                <option *ngFor="let item of Position" [ngValue]="item" (change)="changePos($event)">{{item}}
+                </option>
+             </select>
+            <!-- <input type="text" name="position" id="position" formControlName="Position" required> -->
+        </label>
+
+        <button class="savebutton" [disabled]="Addemployee.invalid" type="submit">Save</button>
+    </form>
+</div>
+</section>

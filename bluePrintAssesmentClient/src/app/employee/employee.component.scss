@@ -1,0 +1,51 @@
+.empList-wrapper{
+    display: grid;
+    grid-template-rows: auto;
+    background-color: #fff;
+    .empList{
+        display: grid;
+        grid-template-rows: auto;
+        grid-row-gap: 6px;
+        padding: 0;
+        list-style: none;
+        margin: 20px 16px;
+
+        .empList--items{
+            display: grid;
+            grid-template-columns: auto 24px;
+            grid-template-areas: "title icon";
+            background-color: lightgray;
+            padding: 12px 24px;
+            list-style: none;
+            max-height: 150px;
+
+            .emp-details{
+                grid-area: title;
+                .emp-name{
+                    font-weight: bold;
+                    color: #000;    
+                    font-size: 22px;
+                }
+                .emp-position{
+                    color: rgb(68, 65, 65);
+                }
+            }
+            .emp-icon{
+                grid-area: icon;
+                align-self: center;
+                cursor: pointer;
+                svg{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        
+            &:hover{
+                .list-item-highlight{
+                    background: #444246;
+                    color: rgb(0, 0, 0);
+                }
+            }
+    }
+}

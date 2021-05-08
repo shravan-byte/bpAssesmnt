@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: Open Sans,sans-serif;
+  }
+  
+  .nav--wrapper{
+    margin: 0 40px
+  }
+  
+  .menu-wrapper{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: #eaeaea;
+    padding: 24px;
+  }

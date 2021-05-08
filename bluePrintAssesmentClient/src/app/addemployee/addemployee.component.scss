@@ -1,0 +1,39 @@
+
+.content-wrapper{
+    padding: 0 16px;
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 60px auto;
+
+    .content-header{
+        text-decoration: underline;
+    }
+    .input-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+
+        label{
+            font-weight: bold;
+            font-size: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 16px;
+        }
+            input{
+                padding: 4px 8px;
+                border-radius: 4px;
+                outline: none;
+                border: 1px solid gray;
+            }
+    }
+
+    .savebutton{
+        padding: 4px 8px;
+        position: fixed;
+        bottom: 24px;
+        right: 60px;
+    }
+}
